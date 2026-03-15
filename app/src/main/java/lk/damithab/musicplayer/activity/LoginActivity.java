@@ -1,5 +1,6 @@
 package lk.damithab.musicplayer.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,7 +24,9 @@ public class LoginActivity extends AppCompatActivity {
 
         this.loginBtn = findViewById(R.id.loginBtn);
         loginBtn.setOnClickListener(V->{
-
+            Intent intent = new Intent(LoginActivity.this, Player.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
         });
     }
 }
